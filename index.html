@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu mensaje deja huella - Prevención del Ciberbullying</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">#TuMensajeDejaHuella</div>
+            <div class="nav-links">
+                <a href="#hero">Inicio</a>
+                <a href="#reflexion">Reflexión</a>
+                <a href="#responsabilidad">Responsabilidad</a>
+                <a href="#accion">Acción</a>
+                <a href="#comunidad">Comunidad</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line" data-text="Tu mensaje">Tu mensaje</span>
+                <span class="title-line highlight" data-text="deja huella">deja huella</span>
+            </h1>
+            <p class="hero-subtitle">En internet, nada se borra realmente.</p>
+            <p class="hero-copy">
+                Cada palabra que compartes en línea puede impactar profundamente en la vida de alguien. 
+                En Perú, el <span class="stat-highlight" id="stat-counter">0%</span> de adolescentes ha experimentado ciberbullying. 
+                Es momento de reflexionar sobre el poder de tus mensajes.
+            </p>
+            <div class="hero-cta">
+                <button class="cta-button" onclick="scrollToSection('reflexion')">
+                    <span>Descubre el impacto</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 15L5 10L6.41 8.59L10 12.17L13.59 8.59L15 10L10 15Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <a href="https://panamericana.pe/nacionales/415336-54-ninos-adolescentes-peru-sufrio-situacion-ciberacoso-ciberbullying-segun-encuesta" 
+               target="_blank" class="stat-link">
+                Fuente: Panamericana Televisión
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. SECCIÓN REFLEXIÓN -->
+    <section id="reflexion" class="reflexion-section">
+        <div class="section-container">
+            <h2 class="section-title">Detrás de cada pantalla hay una persona</h2>
+            <p class="section-quote">"No sabes quién está detrás de la pantalla luchando por sentirse bien."</p>
+            
+            <div class="reflexion-content">
+                <div class="phone-container">
+                    <div class="phone-glow"></div>
+                    <div class="phone-screen" id="phoneScreen">
+                        <div class="phone-messages">
+                            <div class="message offensive" data-message="1">Eres un fracaso</div>
+                            <div class="message offensive" data-message="2">Nadie te quiere</div>
+                            <div class="message offensive" data-message="3">Deberías desaparecer</div>
+                        </div>
+                        <div class="phone-silhouette" id="phoneSilhouette">
+                            <div class="silhouette-person"></div>
+                        </div>
+                    </div>
+                    <p class="hover-hint">Pasa el cursor sobre el celular</p>
+                </div>
+                
+                <div class="reflexion-text">
+                    <p class="reflexion-copy">
+                        Detrás de cada pantalla hay una persona con emociones, luchas internas y días difíciles. 
+                        En Perú, <strong>9 de cada 10 adolescentes</strong> creen que los riesgos digitales pueden tener consecuencias graves.
+                    </p>
+                    <p class="reflexion-copy">
+                        Tus palabras pueden ser un refugio o una carga adicional. Antes de escribir, imagina el rostro de quien recibirá tu mensaje.
+                    </p>
+                    <a href="https://www.aldeasinfantiles.org.pe/noticias/9-de-10-ninos-creen-riesgos-digitales-suicidio" 
+                       target="_blank" class="source-link">
+                        Fuente: Aldeas Infantiles SOS Perú
+                    </a>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <h3>Testimonios reales</h3>
+                <div class="testimonial-cards">
+                    <div class="testimonial-card">
+                        <p>"Los mensajes que recibí me hicieron sentir que no valía nada. No sabía a quién acudir."</p>
+                        <span>- Estudiante, 15 años (Lima)</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Pensé que era un juego, hasta que vi cómo afectaba realmente a mi compañero."</p>
+                        <span>- Estudiante, 16 años (Arequipa)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN RESPONSABILIDAD -->
+    <section id="responsabilidad" class="responsabilidad-section">
+        <div class="section-container">
+            <h2 class="section-title">El poder de elegir tus palabras</h2>
+            <p class="section-quote">"Antes de enviar, piensa: ¿esto ayuda o lastima?"</p>
+            
+            <div class="chat-simulator">
+                <div class="simulator-header">
+                    <h3>Simulador de Chat</h3>
+                    <p>Elige tu respuesta y observa el impacto</p>
+                </div>
+                
+                <div class="chat-container">
+                    <div class="chat-message received">
+                        <div class="message-avatar pulse-avatar">👤</div>
+                        <div class="message-bubble typing-indicator">
+                            <p>Me siento mal hoy... nada me sale bien</p>
+                            <div class="typing-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-options" id="chatOptions">
+                        <button class="option-btn" data-option="empatica" onclick="selectOption('empatica')">
+                            <span>💚</span> ¿Quieres hablar? Estoy aquí para escucharte
+                        </button>
+                        <button class="option-btn" data-option="neutral" onclick="selectOption('neutral')">
+                            <span>😐</span> Ok, espero que te sientas mejor
+                        </button>
+                        <button class="option-btn" data-option="negativa" onclick="selectOption('negativa')">
+                            <span>😒</span> No me importa mucho
+                        </button>
+                        <button class="option-btn" data-option="toxica" onclick="selectOption('toxica')">
+                            <span>💔</span> Déjame en paz con tus problemas
+                        </button>
+                    </div>
+                    
+                    <div class="chat-response" id="chatResponse" style="display: none;">
+                        <div class="response-message" id="responseMessage"></div>
+                        <div class="response-impact" id="responseImpact"></div>
+                        <button class="retry-btn" onclick="resetChat()">Intentar otra respuesta</button>
+                    </div>
+                </div>
+                
+                <div class="simulator-footer">
+                    <p>Practica la empatía digital. Cada mensaje que envías tiene el poder de construir o destruir.</p>
+                    <a href="https://www.gob.pe/institucion/mininter/campañas/97003-se-ciberconsciente" 
+                       target="_blank" class="source-link">
+                        Campaña "Sé CiberConsciente" - Ministerio del Interior
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN ACCIÓN -->
+    <section id="accion" class="accion-section">
+        <div class="section-container">
+            <h2 class="section-title">No estás solo. Toma acción.</h2>
+            <p class="section-quote">"Si eres víctima: bloquea, guarda evidencia y pide ayuda."</p>
+            
+            <div class="accion-steps">
+                <div class="step-card" data-step="1" onclick="toggleStep(1)">
+                    <div class="step-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="25" stroke="currentColor" stroke-width="3"/>
+                            <path d="M20 30L26 36L40 22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>1. BLOQUEAR</h3>
+                    <div class="step-content">
+                        <p class="step-description">Protege tu espacio digital bloqueando al agresor.</p>
+                        <div class="step-details" id="step1Details">
+                            <h4>Cómo bloquear en diferentes plataformas:</h4>
+                            <ul>
+                                <li><strong>Instagram:</strong> Perfil → Menú (⋮) → Bloquear</li>
+                                <li><strong>Facebook:</strong> Perfil → Menú (⋮) → Bloquear</li>
+                                <li><strong>WhatsApp:</strong> Chat → Menú → Más opciones → Bloquear</li>
+                                <li><strong>TikTok:</strong> Perfil → Menú (⋮) → Bloquear</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card" data-step="2" onclick="toggleStep(2)">
+                    <div class="step-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <rect x="10" y="15" width="40" height="30" rx="3" stroke="currentColor" stroke-width="3"/>
+                            <path d="M20 25L25 30L40 18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <rect x="15" y="48" width="30" height="4" rx="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>2. GUARDAR EVIDENCIA</h3>
+                    <div class="step-content">
+                        <p class="step-description">Documenta todo para protegerte y buscar ayuda.</p>
+                        <div class="step-details" id="step2Details">
+                            <h4>Qué información guardar:</h4>
+                            <ul>
+                                <li>Capturas de pantalla de mensajes ofensivos</li>
+                                <li>Fechas y horarios de los incidentes</li>
+                                <li>Nombres de usuario o perfiles involucrados</li>
+                                <li>URLs de publicaciones o comentarios</li>
+                            </ul>
+                            <p><strong>Dónde guardar:</strong> Crea una carpeta segura en tu dispositivo o en la nube.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card" data-step="3" onclick="toggleStep(3)">
+                    <div class="step-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="20" r="8" stroke="currentColor" stroke-width="3"/>
+                            <path d="M15 45C15 38 21 32 30 32C39 32 45 38 45 45" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M20 35L30 25L40 35" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>3. PEDIR AYUDA</h3>
+                    <div class="step-content">
+                        <p class="step-description">Busca apoyo. No estás solo en esto.</p>
+                        <div class="step-details" id="step3Details">
+                            <h4>Recursos disponibles en Perú:</h4>
+                            <div class="help-resources">
+                                <div class="resource-card">
+                                    <h5>📞 Línea 100</h5>
+                                    <p>Servicio gratuito 24/7 del MIMP</p>
+                                    <p><strong>Teléfono:</strong> 100 (gratis desde cualquier operador)</p>
+                                    <p><strong>Chat:</strong> Disponible en línea</p>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>🏫 SíseVe</h5>
+                                    <p>Sistema del Ministerio de Educación</p>
+                                    <a href="https://www.gob.pe/elbullyingnoescosadeninos" target="_blank">
+                                        Reportar en instituciones educativas
+                                    </a>
+                                </div>
+                                <div class="resource-card">
+                                    <h5>👥 Personas de confianza</h5>
+                                    <p>Padres, docentes, psicólogos escolares, amigos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emergency-button">
+                <a href="tel:100" class="emergency-link">
+                    <span>🚨</span>
+                    <span>Línea 100 - Emergencia</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN COMUNIDAD -->
+    <section id="comunidad" class="comunidad-section">
+        <div class="section-container">
+            <h2 class="section-title">Únete al movimiento</h2>
+            <p class="section-quote">"No seas espectador del acoso. Rompe el silencio."</p>
+            
+            <div class="comunidad-content">
+                <div class="commitment-form">
+                    <h3>Haz tu compromiso</h3>
+                    <form id="commitmentForm" onsubmit="submitCommitment(event)">
+                        <input type="text" id="userName" placeholder="Tu nombre (opcional)" class="form-input">
+                        <div class="commitment-checkboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commitment" value="pensar">
+                                <span>Pensaré antes de enviar mensajes</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commitment" value="reportar">
+                                <span>Reportaré casos de ciberbullying que vea</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commitment" value="apoyar">
+                                <span>Apoyaré a quienes lo necesiten</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commitment" value="compartir">
+                                <span>Compartiré esta campaña</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="submit-btn">Unirme al movimiento</button>
+                    </form>
+                </div>
+
+                <div class="social-wall">
+                    <h3>Muro de compromisos</h3>
+                    <div class="wall-messages" id="wallMessages">
+                        <div class="wall-message">
+                            <p>"Me comprometo a pensar antes de enviar mensajes"</p>
+                            <span>- Ana, Lima</span>
+                        </div>
+                        <div class="wall-message">
+                            <p>"No seré espectador. Reportaré lo que vea"</p>
+                            <span>- Carlos, Arequipa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="share-section">
+                <h3>Comparte la campaña</h3>
+                <p>Ayuda a que más personas se unan al movimiento</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareSocial('facebook')">
+                        <span>📘</span> Facebook
+                    </button>
+                    <button class="share-btn" onclick="shareSocial('twitter')">
+                        <span>🐦</span> Twitter
+                    </button>
+                    <button class="share-btn" onclick="shareSocial('whatsapp')">
+                        <span>💬</span> WhatsApp
+                    </button>
+                    <button class="share-btn" onclick="shareSocial('copy')">
+                        <span>🔗</span> Copiar enlace
+                    </button>
+                </div>
+                <p class="hashtag">#TuMensajeDejaHuella</p>
+            </div>
+
+            <div class="campaign-references">
+                <p>Esta campaña se alinea con iniciativas peruanas como:</p>
+                <div class="reference-links">
+                    <a href="https://www.gob.pe/institucion/municarmenalto/campañas/18989-deten-el-acoso-virtual-ciberacoso" 
+                       target="_blank">Campaña "Detén el Acoso Virtual"</a>
+                    <a href="https://www.gob.pe/institucion/aurora/campañas/85675-campana-prevenir-para-proteger" 
+                       target="_blank">Campaña "Prevenir para Proteger"</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Campaña "Tu mensaje deja huella"</p>
+            <p>Prevención del Ciberbullying en Perú</p>
+            <div class="footer-links">
+                <a href="https://www.gob.pe/elbullyingnoescosadeninos" target="_blank">SíseVe - Ministerio de Educación</a>
+                <a href="https://www.defensoria.gob.pe" target="_blank">Defensoría del Pueblo</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
