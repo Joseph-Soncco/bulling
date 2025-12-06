@@ -1336,6 +1336,17 @@ body {
     margin: 0.5rem 0;
 }
 
+.creator-credit {
+    color: var(--neon-cyan) !important;
+    font-size: 0.95rem;
+    margin: 1rem 0 !important;
+}
+
+.creator-credit strong {
+    color: var(--neon-magenta);
+    font-weight: 600;
+}
+
 .footer-links {
     display: flex;
     justify-content: center;
